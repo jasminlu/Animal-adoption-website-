@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>title</title>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        <script src="main.js" defer></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <script src="https://kit.fontawesome.com/86f70aa7c1.js" crossorigin="anonymous"></script>
+    </head>
+	<body class="body">
+        <div class="header_div">
+            <ul class="header">
+                <li class="left"><a href="/index.html"><i class="fa-solid fa-paw"></i></a><h1 class="title">WDCPA</h1></li>
+                <li class="right"><button type="button" onclick="window.location.href='login.html'">LOGIN</button></li>
+            </ul>
+            <ul class="header">
+                <li><a class="header_item light_hover" href="/events.html">EVENTS</a></li>
+                <li><a class="header_item light_hover" href="/contact.html">CONTACT US</a></li>
+                <li><a class="header_item light_hover" href="/animals.html">MEET THE ANIMALS</a></li>
+                <li><a class="header_item light_hover" href="/userinfo.html">MY PROFILE</a></li>
+                <li class="border">   </li>
+            </ul>
+        </div>
+
+        <div id="default">
+            <h2>Log in:</h2>
+            <button type="button" onclick="hideDiv('default', 'login')">LOG IN</button>
+            <h2>Sign up (if you do not have an account):</h2>
+            <button type="button" onclick="hideDiv('default', 'signup')">SIGN UP</button>
+            <h2>Sign in with Google:</h2>
+            <button type="button" onclick="hideDiv('default', 'google')">SIGN IN</button>
+        </div>
+        <div id="login">
+            <h2>LOG IN:</h2>
+            <p>Email:</p>
+            <input id="login-email" type="text" placeholder="example@email.com"/>
+            <p>Password:</p>
+            <input id="login-password" type="password" placeholder="*****"/>
+            <p></p>
+            <button type="button" onclick="logInfo()">SUBMIT</button>
+            <p></p>
+            <button type="button" class="pink_button" onclick="showDiv('default', 'login')">BACK</button>
+            <p></p>
+        </div>
+        <div id="signup">
+            <h2>SIGN UP (if you do not have an account):</h2>
+            <p>First Name:</p>
+            <input id="signup-first-name" type="text"/>
+            <p>Last Name:</p>
+            <input id="signup-last-name" type="text"/>
+            <p>Location: (Let admin know if you want to change it in the future!)</p>
+            <select name="location" id="signup-location">
+                <option value="1">Northern Adelaide Shelter (SA)</option>
+                <option value="2">Chatswood Shelter (NSW)</option>
+                <option value="3">Marborough Shelter (VIC)</option>
+            </select>
+            <p>Phone:</p>
+            <input id="signup-phone" type="text"/>
+            <p>Email:</p>
+            <input id="signup-email" type="text" placeholder="example@email.com" />
+            <p>Password:</p>
+            <input id="signup-password" type="password" placeholder="*****"/>
+            <p></p>
+            <button type="button" onclick="submitInfo()">SUBMIT</button>
+            <p></p>
+            <button type="button" class="pink_button" onclick="showDiv('default', 'signup')">BACK</button>
+            <p></p>
+        </div>
+        <div id="google">
+            <h2>SIGN UP WITH GOOGLE:</h2>
+            <p>Name:</p>
+            <input class="name" type="text"/>
+            <p>Email:</p>
+            <input class="email" type="text"/>
+            <p>Password:</p>
+            <input class="password" type="text"/>
+            <p></p>
+            <button type="button">SUBMIT</button>
+            <p></p>
+            <button type="button" class="pink_button" onclick="showDiv('default', 'google')">BACK</button>
+            <p></p>
+        </div>
+        <p> </p>
+
+        <footer class="footerMain">
+            <div class="box">
+                <ul class="footer_items">
+                    <li><a href="/events.html">Events</a></li>
+                    <li><a href="/userinfo.html">My Profile</a></li>
+                    <li><a href="/animals.html">Meet the Animals</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-paw"></i>
+            </div>
+            <div class="box">
+                <ul class="footer_items">
+                    <li><p>DARK MODE:</p></li>
+                    <li><button type="button" onclick="darkmode_on()"> ON </button>
+                    <button type="button" onclick="darkmode_off()"> OFF </button></li>
+                </ul>
+            </div>
+        </footer>
+
+    </body>
+</html>

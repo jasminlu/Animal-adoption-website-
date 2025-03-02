@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Manager Infomation</title>
+    <meta charset="UTF-8">
+    <script src="main.js" defer></script>
+    <script src="userinfo.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <script src="https://kit.fontawesome.com/86f70aa7c1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Standard header div-->
+    <div class="header_div">
+        <ul class="header">
+            <li class="left"><a href="/index.html"><i class="fa-solid fa-paw"></i></a>
+                <h1 class="title">WDCPA</h1>
+            </li>
+            <li class="right"><button type="button" onclick="window.location.href='login.html'">LOGIN</button></li>
+        </ul>
+        <ul class="header">
+            <li><a class="header_item light_hover" href="/events.html">EVENTS</a></li>
+            <li><a class="header_item light_hover" href="/contact.html">CONTACT US</a></li>
+            <li><a class="header_item light_hover" href="/animals.html">MEET THE ANIMALS</a></li>
+            <li><a class="header_item light_hover" href="/userinfo.html">MY PROFILE</a></li>
+            <li class="border"> </li>
+        </ul>
+    </div>
+
+    <!-- Personal Details Div -->
+    <div id="outer-profile">
+        <h2>Personal Details</h2>
+        <img src="banner.jpeg" class="animal_pic" alt="cat">
+        <div id="personal_div">
+            <!-- <p><strong>Name:</strong> <span id="firstName"></span><span id="lastName"></span></p>
+            <p><strong>Position:</strong> <span id="pos"></span></p>
+            <p><strong>Bio:</strong> <span id="bio"></span></p> -->
+        </div>
+        <button type="button" onclick="hideDiv('outer-profile','edit_div')">Edit Profile</button>
+     </div>
+    <!-- Edit Profile Div -->
+    <div id="edit_div" style="display:none">
+        <h2>Edit Profile</h2>
+        <img src="banner.jpeg" alt="cat" class="animal_pic" >
+        <p>Name:</p>
+        <input class="name" type="text"></input>
+        <p>Username:</p>
+        <input class="username" type="text"></input>
+        <p>Position:</p>
+        <input class="position" type="text"></input>
+        <p>Bio:</p>
+        <input class="bio" type="text"></input>
+        <h3>Contact Details</h3>
+        <p>Email:</p>
+        <input class="email" type="text"></input>
+        <p>Phone:</p>
+        <input class="phone" type="text"></input>
+        <br>
+        <button type="button" onclick="showDiv('outer-profile','edit_div')">Save</button>
+    </div>
+    <script src="userinfo.js"></script>
+    <!-- Manager Div -->
+    <div id="manager_div">
+        <h2>Your Team</h2>
+        <p>Your Members</p>
+        <table class="pure-table pure-table-horizontal" id="managerTable">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>UserID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+
+
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" onclick="window.location.href='managermembers.html'">Manage Members</button>
+        <button type="button" onclick="showDiv('post_div','manager_div')">Create New Post</button>
+        <button type="button" onclick="showDiv('event_div','manager_div')">Create Event</button>
+        <button type="button" onclick="window.location.href='managerevents.html'">GOTO Events</button>
+    </div>
+    <!-- Posts -->
+    <h2>Annoucements</h2>
+    <div id="post-div">
+
+    </div>
+    <button type="button" onclick="logout()">Logout</button>
+    <!-- New Post -->
+    <div id="post_div" style="display:none">
+        <h2>CREATE NEW POST</h2>
+        <p>Title:</p>
+        <input id="title-post" type="text"></input>
+        <p>Content:</p>
+        <textarea id="content-post" rows="10" cols="60" type="text"></textarea>
+        <p>Public or Private:</p>
+        <select name="public-private" id="public-private">
+            <option value="0">Public</option>
+            <option value="1">Private</option>
+        </select>
+        <br>
+        <button type="button" onclick="poster()">Create</button>
+        <button type="button" onclick="showDiv('manager_div','post_div')">Back</button>
+    </div>
+    <!-- Create Event -->
+    <div id="event_div" style="display:none">
+        <h2>CREATE EVENT</h2>
+        <p>Name:</p>
+        <input id="event-name" type="text"></input>
+        <p>Description:</p>
+        <textarea id="event-description" rows="10" cols="60" type="text"></textarea>
+        <p>Location:</p>
+        <select name="location-event" id="signup-location">
+            <option value="1">Northern Adelaide Shelter (SA)</option>
+            <option value="2">Chatswood Shelter (NSW)</option>
+            <option value="3">Marborough Shelter (VIC)</option>
+        </select>
+        <br>
+        <p>DateTime:</p>
+        <input id="time-event" type="datetime-local"></input>
+        <p>RSVP required?</p>
+        <select name="rsvp" id="rsvp-event">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <br>
+        <button type="button" onclick="eventer()">Create</button>
+        <button type="button" onclick="showDiv('manager_div','event_div')">Back</button>
+    </div>
+    <br>
+    <footer class="footerMain">
+        <div class="box">
+            <ul class="footer_items">
+                <li><a href="/events.html">Events</a></li>
+                <li><a href="/userinfo.html">My Profile</a></li>
+                <li><a href="/animals.html">Meet the Animals</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <i class="fa-solid fa-paw"></i>
+        </div>
+        <div class="box">
+            <ul class="footer_items">
+                <li>
+                    <p>DARK MODE:</p>
+                </li>
+                <li><button type="button" onclick="darkmode_on()"> ON </button>
+                    <button type="button" onclick="darkmode_off()"> OFF </button>
+                </li>
+            </ul>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                getManage();
+            });
+            async function getPersonalInfo() {
+                try {
+                    const response = await fetch('/personal');
+                    const personalHTML = await response.text();
+                    document.getElementById('personal_div').innerHTML = personalHTML;
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+
+            getPersonalInfo();
+        </script>
+    </footer>
+</body>
+
+</html>

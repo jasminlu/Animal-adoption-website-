@@ -1,0 +1,12 @@
+<h3> <u>1. 20th June:</u> Adopt a Dog Day</h3>
+<p>Come adopt a dog with us!</p>
+<h3> <u>2. 12th July:</u> Adopt a Cat Day</h3>
+<p>Come adopt a cat with us!</p>
+<h3> <u>3. 7th August:</u> Adopt a Bunny Day</h3>
+<p>Come adopt a bunny with us!</p>
+<h3> <u>4. 21st August:</u> Volunteer Day</h3>
+<p>a day for volunteers!</p>
+<h3> <u>5. 1st September:</u> Adopt a Fish Day</h3>
+<p>Come adopt a fish with us!</p>
+<h3> <u>6. 24th September:</u> New Volunteer Day</h3>
+<p>New volunteers induction!</p>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Manager: View Events</title>
+    <meta charset="UTF-8">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <script src="https://kit.fontawesome.com/86f70aa7c1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Standard header div-->
+    <div class="header_div">
+        <ul class="header">
+            <li class="left"><a href="/index.html"><i class="fa-solid fa-paw"></i></a><h1 class="title">WDCPA</h1></li>
+            <li class="right"><button type="button" onclick="window.location.href='login.html'">LOGIN</button></li>
+        </ul>
+        <ul class="header">
+            <li><a class="header_item light_hover" href="/events.html">EVENTS</a></li>
+            <li><a class="header_item light_hover" href="/contact.html">CONTACT US</a></li>
+            <li><a class="header_item light_hover" href="/animals.html">MEET THE ANIMALS</a></li>
+            <li><a class="header_item light_hover" href="/userinfo.html">MY PROFILE</a></li>
+            <li class="border">   </li>
+        </ul>
+    </div>
+
+    <!-- Event Div -->
+    <div id="event_div">
+        <h2>EVENTS</h2>
+
+    </div>
+    <!-- RSVP Div -->
+    <div id="rsvp_div">
+        <p>Members RSVP'd</p>
+        <table class="pure-table pure-table-horizontal" id="rsvpTable">
+            <thead>
+                <tr class="userTableItems">
+                    <th>rsvpID</th>
+                    <th>Event Name</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+            </thead>
+            <tbody class="userTableItems">
+                <tr>
+
+
+
+                </tr>
+            </tbody>
+        </table>
+        <div id="button-div">
+            <button type="button" onclick="showDiv('edit-members','button-div')">EDIT MEMBERS</button>
+        </div>
+        <div id="edit-members">
+            <p>Delete RSVP - insert rsvpid:</p>
+            <input id="delete-rsvp" class="delete-rsvp" type="text"/>
+            <button type="button" class="pink_button" onclick="deleteRSVP()">SUBMIT</button>
+            <br>
+            <button type="button" class="pink_button" onclick="showDiv('button-div', 'edit-members')">BACK</button>
+            <p></p>
+        </div>
+
+    </div>
+    <button type="button" onclick="window.location.href='managerinfo.html'">BACK</button>
+
+    <br>
+    <p> </p>
+    <footer class="footerMain">
+        <div class="box">
+            <ul class="footer_items">
+                <li><a href="/events.html">Events</a></li>
+                <li><a href="/userinfo.html">My Profile</a></li>
+                <li><a href="/animals.html">Meet the Animals</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <i class="fa-solid fa-paw"></i>
+        </div>
+        <div class="box">
+            <ul class="footer_items">
+                <li><p>DARK MODE:</p></li>
+                <li><button type="button" onclick="darkmode_on()"> ON </button>
+                <button type="button" onclick="darkmode_off()"> OFF </button></li>
+            </ul>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                getRSVP();
+            });
+        </script>
+
+    </footer>
+</body>
+
+</html>

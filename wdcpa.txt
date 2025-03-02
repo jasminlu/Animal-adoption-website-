@@ -1,0 +1,26 @@
+HOW TO USE THE WDCPA DATABASE!
+11 fun tables of information :D
+
+1. When making queries or inserting information, make sure that you are putting in all the required variables into the table.
+   If it has NOT NULL next the value it must be inputted! Unless it is dateTime or an AUTO_INCREMENT id. Otherwise, it will not work.
+   To insert data directly by mysql the command is:
+   INSERT INTO table_name
+   VALUES (variable1, variable2, variable3);
+   You can also choose some variables to input like this:
+   INSERT INTO table_name(var1, var3, var5)
+   VALUES (variable1, variable3, variable5),
+   (variable1, variable3, variable5);
+
+2. Want to add information to a variable that is a foreign key?
+   Make sure to have a look at the relevant table and identify the id before adding!
+   Example: For the user table there are two foreign keys for the position and location.
+   Check the respective tables for the relevant id and simply input it in as normal.
+
+3. Always back up the database after any changes using this command after exiting mysql:
+   mysqldump --databases wdcpa > wdcpa.sql
+
+4. The animalType, eventType, pos and location tables SHOULD NOT be edited.
+
+NOTE: I have left the subscribe table empty so that you can test it with real emails. I have also left the rsvp table empty.
+
+

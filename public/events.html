@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Events</title>
+        <meta charset="utf-8">
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <script src="https://kit.fontawesome.com/86f70aa7c1.js" crossorigin="anonymous"></script>
+    </head>
+    <body onload="hide()">
+        <div class="header_div">
+            <ul class="header">
+                <li class="left"><a href="/index.html"><i class="fa-solid fa-paw"></i></a><h1 class="title">WDCPA</h1></li>
+                <li class="right"><button type="button" onclick="window.location.href='login.html'">LOGIN</button></li>
+            </ul>
+            <ul class="header">
+                <li><a class="header_item light_hover" href="/events.html">EVENTS</a></li>
+                <li><a class="header_item light_hover" href="/contact.html">CONTACT US</a></li>
+                <li><a class="header_item light_hover" href="/animals.html">MEET THE ANIMALS</a></li>
+                <li><a class="header_item light_hover" href="/userinfo.html">MY PROFILE</a></li>
+                <li class="border">   </li>
+            </ul>
+        </div>
+
+        <h2>FUTURE EVENTS</h2>
+        <div id="main"></div>
+        <select id="rsvpDropDown">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+        <br>
+        <button type="button" id="rsvpButton" onclick="rsvp()">RSVP</button>
+        <br>
+        <button type="button" id="eventsButton" onclick="displayEvents()">SHOW EVENTS</button>
+        <p> </p>
+
+        <footer class="footerMain">
+            <div class="box">
+                <ul class="footer_items">
+                    <li><a href="/events.html">Events</a></li>
+                    <li><a href="/userinfo.html">My Profile</a></li>
+                    <li><a href="/animals.html">Meet the Animals</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-paw"></i>
+            </div>
+            <div class="box">
+                <ul class="footer_items">
+                    <li><p>DARK MODE:</p></li>
+                    <li><button type="button" onclick="darkmode_on()"> ON </button>
+                    <button type="button" onclick="darkmode_off()"> OFF </button></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script>
+            document.getElementById("rsvpButton").style.display == "none";
+            document.getElementById("rsvpDropDown").style.display == "none";
+        </script>
+    </body>
+</html>
